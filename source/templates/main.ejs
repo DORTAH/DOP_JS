@@ -1,0 +1,14 @@
+<%- include('includes/header.ejs') %>
+    <h1>Запланированные дела</h1>
+
+    <% for (let item of todos) { %>
+        <article class="card">
+        <header><h2><a href="<%= path %>/<%= item._id %>"><%= item.title %></a></h2></header>
+        <footer>
+            <% if (item.createdAt) {%>
+                <p><%= new Date(item.createdAt).toLocaleString() %></p>
+            <% } %> 
+        </footer>
+        </article>
+    <% } %> 
+<%- include('includes/footer.ejs') %>

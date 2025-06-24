@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> - <%= appTitle %></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+</head>
+<body style="padding: 50px 10px 0 10px;">
+    <nav>
+        <a href="/" class="brand"><span>Главная страница</span></a>
+        <input type="checkbox" id="bmenub" class="show">
+        <label for="bmenub" class="burger pseudo button">&#9776;</label>
+        <div class="menu">
+            <a href="/todos"><span>Дела</span></a>
+            <a href="/todos/add" class="button">Добавить дело</a>
+        </div>        
+    </nav>
