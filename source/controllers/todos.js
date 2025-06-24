@@ -7,8 +7,16 @@ export function infoPage(req, res) {
 }
 
 export function mainPage(req, res) {
+  let list = getListTodos();
+  
+  if (req.query.search) {
+    const q = req.query.search.toLowerCase()
+    list = list.filter((el) => {return el.title.toLowerCase().includes(q)})
+  }
+
   res.render("main", {
-    todos: getListTodos(),
+    req: req,
+    todos: list,
     title: "Главная",
     path: req.baseUrl,
   });

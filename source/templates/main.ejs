@@ -1,4 +1,9 @@
 <%- include('includes/header.ejs') %>
+    <form method="get">
+        <input type="search" name="search" value="<%=  %>" style="width: 200px;">
+        <input type="submit" value="Найти">
+    </form>
+
     <h1>Запланированные дела</h1>
 
     <% for (let item of todos) { %>
